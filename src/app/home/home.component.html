@@ -1,0 +1,39 @@
+<head>
+<style>
+    table {
+  table-layout: fixed ;
+  width: 100% ;
+}
+td {
+  width: 25% ;
+  
+}
+</style>
+</head>
+<body >
+
+    <h1 style="margin: 10px; text-align: center;color: brown;">Users Information</h1>
+    
+      
+    <table  align="center" class="table table-striped" style="background-color:lightblue ;" border="1" >
+        <thead class="table-dark">
+          <tr>
+            <th scope="col"> ID </th>
+            <th scope="col" >First Name  </th>
+            <th scope="col">Last Name  </th>
+            <th scope="col"> Email </th>
+            <th scope="col"> Profile Picture </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let u of users.data">
+            <td>{{u.id}}</td>
+            <td>{{u.first_name}}</td>
+            <td>{{u.last_name}}</td>
+            <td>{{u.email}}</td>
+            <td><img class="img-fluid img-responsive rounded product-image" src={{u.avatar}}> </td>
+          </tr>
+      
+        </tbody>
+      </table>
+    </body>
